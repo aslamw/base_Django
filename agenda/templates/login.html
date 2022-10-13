@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="submit" method="post"> {% csrf_token %}
+        <div align="center">
+
+            <Label id="user">Usuário:</Label>
+            <input type="text" name="username" id="user">
+
+            <Label id='pass'>Senha:</Label>
+            <input type="text" name="password" id="pass">
+            
+            <button type="submit">Entrar</button>
+        </div>
+    </form>
+
+    {% for message in messages %}
+        <div align="center">
+            <strong>Error: </strong>{{message}}
+        </div>
+    {% endfor %}
+
+</body>
+</html>

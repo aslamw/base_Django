@@ -1,0 +1,9 @@
+{%extends "model_page.html"%}
+{%block content%}
+    <h2>Agendamentos</h2>
+    <ul>
+        {% for my_evento in evento %}
+            <li>{{my_evento.titulo}} - {{my_evento.get_data_evento}}</li>
+        {% endfor %}
+    </ul>
+{%endblock%}
